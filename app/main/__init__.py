@@ -1,11 +1,8 @@
 from flask import Blueprint
 from flask import render_template
 
-print("&&&&&&&&&&&&&")
 main = Blueprint('main', __name__)
 
-#from . import views, errors
-@main.route("/", methods=["GET"])
-def index():
-    return render_template("index1.html")
+# 记得把写在别的地方的路由导入进来
+from . import views, errors
 
